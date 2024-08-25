@@ -1,0 +1,15 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Change Cron Syntax based on your requirements
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Run a script
+        run: echo "Executing Script" # Add your script here
